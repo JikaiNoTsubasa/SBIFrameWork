@@ -13,6 +13,6 @@ public class SBIEncrypter {
 	public static String decode(String pwd) {
 		if (!pwd.startsWith(START)) 
 			return pwd;
-		return new String(Base64.getDecoder().decode(pwd.getBytes()));
+		return new String(Base64.getDecoder().decode(pwd.replace(START, "").getBytes()));
 	}
 }

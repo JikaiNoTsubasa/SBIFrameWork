@@ -61,6 +61,18 @@ public class UI {
 		return s;
 	}
 	
+	public static String askForTextInput(String title, String label, String defaultValue){
+		String s = (String)JOptionPane.showInputDialog(
+                null,
+                label,
+                title,
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                null,
+                defaultValue);
+		return s;
+	}
+	
 	public static byte[] imageToBytes(BufferedImage img) throws IOException {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		ImageIO.write( img, "png", baos );
